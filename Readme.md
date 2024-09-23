@@ -1,5 +1,8 @@
 # SWAG LAB flow demonstration with Playwright
 
+## Website Under Test
+https://www.saucedemo.com/v1/
+
 ## Features
 
 - Login flow.
