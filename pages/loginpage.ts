@@ -1,7 +1,11 @@
-import { expect } from "@playwright/test";
+import { expect, Page } from "@playwright/test";
 
 export class LoginPage {
-  constructor(page) {
+  page: any;
+  passwordField: any;
+  usernameField: any;
+  loginButton: any;
+  constructor(page: Page) {
     this.page = page;
     this.usernameField = page.getByTestId('username');
     this.passwordField = page.getByTestId('password');
@@ -12,7 +16,7 @@ export class LoginPage {
     await this.page.goto("https://www.saucedemo.com/v1/");
   }
 
-  async login(username, password) {
+  async login(username: string, password: string) {
     await this.usernameField.fill(username);
     await this.passwordField.fill(password);
     await this.loginButton.click();

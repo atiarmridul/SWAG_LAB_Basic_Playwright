@@ -1,6 +1,20 @@
 import { expect } from "@playwright/test";
 
 export class InventoryPage {
+  page: any;
+  firstProduct: any;
+  secondProduct: any;
+  addToCurtButton: any;
+  returnToHome: any;
+  cartButton: any;
+  cartFirstProduct: any;
+  checkoutbutton: any;
+  cartSecondProduct: any;
+  firstName: any;
+  lastName: any;
+  postCode: any;
+  continueButton: any;
+  finishButton: any;
   constructor(page) {
     this.page = page;
     this.firstProduct = page.locator(".inventory_item_name").nth(0);
